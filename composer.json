@@ -1,0 +1,18 @@
+{
+  "name": "hachibu/mysterybodega",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "hachibu",
+      "email": "raymondsohn@gmail.com"
+    }
+  ],
+  "require": {
+    "johnpbloch/wordpress": "4.9.4",
+    "vlucas/phpdotenv": "2.4"
+  },
+  "extra": {
+    "wordpress-install-dir": "wp"
+  }
+}

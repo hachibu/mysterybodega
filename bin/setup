@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/setup_dep'
+
+DEPS = [
+  SetupDep.new(name: 'php',      type: :exec),
+  SetupDep.new(name: 'composer', type: :exec),
+  SetupDep.new(name: '.env',     type: :file),
+]
+
+DEPS.each do |dep|
+  if dep.exists?
+    puts "Found #{dep.file? ? dep.name : dep.path}"
+  else
+    puts "#{dep.name} not installed"
+    exit 1
+  end
+end
+
+`composer install`

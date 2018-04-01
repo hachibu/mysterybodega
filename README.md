@@ -1,1 +1,3 @@
-# mysterybodega
+# Development Setup
+
+    bin/setup
