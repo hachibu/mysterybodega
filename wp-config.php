@@ -43,7 +43,7 @@ define('WP_CONTENT_DIR', dirname( __FILE__ ) . '/wp-content');
 $table_prefix = 'wp_';
 
 if (!defined('ABSPATH')) {
-	define('ABSPATH', dirname(__FILE__) . '/wp/');
+  define('ABSPATH', dirname(__FILE__) . '/wp/');
 }
 
 require_once(ABSPATH . 'wp-settings.php');

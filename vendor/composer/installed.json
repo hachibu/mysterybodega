@@ -1,5 +1,49 @@
 [
     {
+        "name": "dintel/php-github-webhook",
+        "version": "0.2.0",
+        "version_normalized": "0.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/dintel/php-github-webhook.git",
+            "reference": "e6450ebdbc718b8d5fc6e5a2ae462d350232a0ce"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/dintel/php-github-webhook/zipball/e6450ebdbc718b8d5fc6e5a2ae462d350232a0ce",
+            "reference": "e6450ebdbc718b8d5fc6e5a2ae462d350232a0ce",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4"
+        },
+        "time": "2016-11-20T11:41:31+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "GitHubWebhook\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Dmitry Zbarski",
+                "email": "dmitry.zbarski@gmail.com",
+                "homepage": "http://zbarski.info",
+                "role": "Developer"
+            }
+        ],
+        "description": "Simple class for handling GitHub webhook calls",
+        "keywords": [
+            "git",
+            "webhook"
+        ]
+    },
+    {
         "name": "johnpbloch/wordpress",
         "version": "4.9.4",
         "version_normalized": "4.9.4.0",

@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInit8ce046be9616d557dd03fdec25a037b6
 {
     public static $prefixLengthsPsr4 = array (
+        'G' => 
+        array (
+            'GitHubWebhook\\' => 14,
+        ),
         'D' => 
         array (
             'Dotenv\\' => 7,
@@ -14,6 +18,10 @@ class ComposerStaticInit8ce046be9616d557dd03fdec25a037b6
     );
 
     public static $prefixDirsPsr4 = array (
+        'GitHubWebhook\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dintel/php-github-webhook/src',
+        ),
         'Dotenv\\' => 
         array (
             0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
