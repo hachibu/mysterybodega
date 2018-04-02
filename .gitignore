@@ -1,6 +1,7 @@
 .env
 .htaccess
 
+logs
 wp-content/backup/*
 wp-content/cache/*
 wp-content/upgrade/*
