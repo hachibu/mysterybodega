@@ -1,3 +1,5 @@
-# Development Setup
+# Development
 
     bin/setup
+
+# Deployment
