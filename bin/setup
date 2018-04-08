@@ -1,20 +1,55 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env crystal
 
-require_relative '../lib/setup_dep'
+require "colorize"
 
-DEPS = [
-  SetupDep.new(name: 'php',      type: :exec),
-  SetupDep.new(name: 'composer', type: :exec),
-  SetupDep.new(name: '.env',     type: :file),
-]
+class Requirement
+  getter :name, :type
 
-DEPS.each do |dep|
-  if dep.exists?
-    puts "Found #{dep.file? ? dep.name : dep.path}"
-  else
-    puts "#{dep.name} not installed"
-    exit 1
+  enum Type
+    Executable
+    File
+  end
+
+  def initialize(@name : String, @type : Type)
+  end
+
+  def exists? : Bool
+    case type
+    when Type::Executable
+      File.exists?(path) && File.executable?(path)
+    when Type::File
+      File.exists?(path)
+    else
+      false
+    end
+  end
+
+  def path : String
+    case type
+    when Type::Executable
+      `which #{name}`.strip
+    when Type::File
+      File.expand_path(name)
+    else
+      ""
+    end
   end
 end
 
-`composer install`
+def error(message)
+  puts(message.colorize.red)
+  exit(1)
+end
+
+requirements = [
+  Requirement.new(name: "php",      type: Requirement::Type::Executable),
+  Requirement.new(name: "composer", type: Requirement::Type::Executable),
+  Requirement.new(name: ".env",     type: Requirement::Type::File)
+]
+requirements.each do |r|
+  next if r.exists?
+  error("Missing #{r.type}: #{r.name}.")
+end
+puts("All requirements satisfied.".colorize.green)
+
+system("composer install")

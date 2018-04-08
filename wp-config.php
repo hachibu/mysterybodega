@@ -38,6 +38,12 @@ foreach ($env_keys as $env_key) {
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 define('AUTOMATIC_UPDATER_DISABLED', false);
+
+if ($wp_env == 'development') {
+  define('WP_CONTENT_URL', 'http://localhost:8888/mysterybodega' . '/wp-content');
+} else {
+  define('WP_CONTENT_URL', 'https://mysterybodega.com' . '/wp-content');
+}
 define('WP_CONTENT_DIR', dirname( __FILE__ ) . '/wp-content');
 
 $table_prefix = 'wp_';

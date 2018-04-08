@@ -10,7 +10,7 @@
   ],
   "require": {
     "dintel/php-github-webhook": "0.2.0",
-    "johnpbloch/wordpress": "4.9.4",
+    "johnpbloch/wordpress": "4.9.5",
     "vlucas/phpdotenv": "2.4"
   },
   "extra": {
