@@ -1053,7 +1053,7 @@ a:active {
 }
 
 .post-navigation {
-	border-top: 4px solid #1a1a1a;
+	border-top: 2px solid #1a1a1a;
 	border-bottom: 4px solid #1a1a1a;
 	clear: both;
 	font-family: "IBM Plex Sans", "Helvetica Neue", sans-serif;
@@ -1096,11 +1096,11 @@ a:active {
 }
 
 .post-navigation div + div {
-	border-top: 4px solid #1a1a1a;
+	border-top: 2px solid #1a1a1a;
 }
 
 .pagination {
-	border-top: 4px solid #1a1a1a;
+	border-top: 2px solid #1a1a1a;
 	font-family: "IBM Plex Sans", "Helvetica Neue", sans-serif;
 	font-size: 19px;
 	font-size: 1.1875rem;
@@ -1405,7 +1405,7 @@ blockquote:after,
  */
 
 .widget {
-	border-top: 4px solid #1a1a1a;
+	border-top: 2px solid #1a1a1a;
 	margin-bottom: 3.5em;
 	padding-top: 1.75em;
 }
@@ -2050,7 +2050,7 @@ body:not(.search-results) .entry-summary > :last-child,
 }
 
 .page-header {
-	border-top: 4px solid #1a1a1a;
+	border-top: 2px solid #1a1a1a;
 	margin: 0 7.6923% 3.5em;
 	padding-top: 1.75em;
 }
@@ -2191,7 +2191,7 @@ body.search-no-results .page-header {
 
 .comments-title,
 .comment-reply-title {
-	border-top: 4px solid #1a1a1a;
+	border-top: 2px solid #1a1a1a;
 	font-family: "IBM Plex Sans", "Helvetica Neue", sans-serif;
 	font-size: 23px;
 	font-size: 1.4375rem;
