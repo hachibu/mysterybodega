@@ -184,31 +184,34 @@ function twentysixteen_widgets_init() {
 }
 add_action( 'widgets_init', 'twentysixteen_widgets_init' );
 
-if ( ! function_exists( 'twentysixteen_fonts_url' ) ) :
-/**
- * Register Google fonts for Twenty Sixteen.
- *
- * Create your own twentysixteen_fonts_url() function to override in a child theme.
- *
- * @since Twenty Sixteen 1.0
- *
- * @return string Google fonts URL for the theme.
- */
-function twentysixteen_fonts_url() {
-	$fonts_url = '';
-	$fonts     = array( 'IBM Plex Sans', 'IBM Plex Mono' );
-	$subsets   = 'latin,latin-ext';
+if ( ! function_exists( 'twentysixteen_fonts_url' ) ) {
+  /**
+   * Register Google fonts for Twenty Sixteen.
+   *
+   * Create your own twentysixteen_fonts_url() function to override in a child theme.
+   *
+   * @since Twenty Sixteen 1.0
+   *
+   * @return string Google fonts URL for the theme.
+   */
+  function twentysixteen_fonts_url() {
+    $fonts_url = '';
+    $fonts     = array();
+    $subsets   = 'latin,latin-ext';
 
-	if ( $fonts ) {
-		$fonts_url = add_query_arg( array(
-			'family' => urlencode( implode( '|', $fonts ) ),
-			'subset' => urlencode( $subsets ),
-		), 'https://fonts.googleapis.com/css' );
-	}
+    $fonts[] = 'IBM Plex Sans:400,700';
+    $fonts[] = 'IBM Plex Mono:400,700';
 
-	return $fonts_url;
+    if ( $fonts ) {
+      $fonts_url = add_query_arg( array(
+        'family' => urlencode( implode( '|', $fonts ) ),
+        'subset' => urlencode( $subsets ),
+      ), 'https://fonts.googleapis.com/css' );
+    }
+
+    return $fonts_url;
+  }
 }
-endif;
 
 /**
  * Handles JavaScript detection.
